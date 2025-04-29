@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.app > button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.lists {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  align-self: flex-start;
+}
+
+.list-container {
+  background-color: #f0f7ff;
+  border-radius: 12px;
+  padding: 16px;
+  width: 350px;
+  height: 480px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.list-container input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+.items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list-item {
+  background-color: white;
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-text {
+  flex: 1;
+}
+
+.item-heading {
+  font-weight: 600;
+  font-size: 16px;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.item-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.arrows {
+  display: flex;
+  gap: 6px;
+  margin-left: 12px;
+}
+
+.arrows button {
+  padding: 4px 8px;
+  background-color: #d1d5db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  background-color: #ef4444;
+  color: white;
+}
+
+.buttons button:last-child {
+  background-color: #10b981;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .lists {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list-container {
+    width: 90%;
+  }
+} 
+
