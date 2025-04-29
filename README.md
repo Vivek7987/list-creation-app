@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# 📋 List Creation App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React application to fetch and manage categorized lists dynamically. Users can select two lists to create a new custom list by transferring items between them. Built as part of a frontend assignment using **React**, **Hooks**, and modern **component architecture**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+🔗 [Click here to view the deployed app](https://your-username.github.io/list-creation-app)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🎥 Loom Video Walkthrough
 
-### `npm test`
+📽️ [Watch the video explanation & walkthrough](https://www.loom.com/share/your-looom-link)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📌 Project Objective
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The app demonstrates key front-end development skills including:
+- Making HTTP requests with `fetch`
+- Managing different API states (loading, success, failure)
+- Dynamic and conditional rendering
+- Component decomposition and state management
+- Responsive UI
+- Implementing UI interactions with precise behavior
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧠 How It Works
 
-### `npm run eject`
+### 📦 Initial Load
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- On load, a `GET` request is made to `https://apis.ccbp.in/list-creation/lists`.
+- List items are categorized using the `list_number` provided in the API response.
+- Each category is displayed as a separate scrollable list.
+- Loader is shown while fetching, and a failure view appears if API fails.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### ✅ Selecting Lists
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Each list has a checkbox in **"All Lists View"**.
+- User must select **exactly two** lists to proceed.
+- Clicking the “Create a New List” button without selecting two lists shows an error message.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🔁 Creating a New List
 
-## Learn More
+- A new view appears with 3 columns:
+  - First selected list
+  - Empty "New List"
+  - Second selected list
+- Items can be moved:
+  - From selected lists ➝ to New List
+  - From New List ➝ to either selected list
+- Arrows (`→` and `←`) control the movement between lists.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### ❌ Cancel & ✅ Update
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Cancel** resets all changes and reloads from API.
+- **Update** finalizes changes and goes back to "All Lists View" with new list state.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🧱 Component Structure
 
-### Analyzing the Bundle Size
+src/ │ ├── components/ │ ├── ListItem/ → Individual list item component │ ├── ListContainer/ → List of items with header and arrows │ ├── ListsView/ → Renders all lists with checkboxes │ ├── ListCreationView/ → Three-column view for creating new list │ └── LoaderFailure/ → Shows loading spinner or failure message │ ├── constants/ → API URLs and status constants ├── App.js → Main app logic and routing between views ├── App.css → Centralized styling └── index.js → Entry point
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🖥️ Responsive Design
 
-### Advanced Configuration
+- Flexbox and media queries ensure the app works smoothly on:
+  - Small devices (phones)
+  - Tablets
+  - Large desktops
+- Lists stack vertically on small screens and appear in rows on larger screens.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🧪 Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **React.js** (Functional components + Hooks)
+- **Fetch API** for data
+- **CSS Flexbox + Media Queries** for layout
+- **React Best Practices**
+  - Component responsibility
+  - State lifting
+  - Destructuring
+  - No flag arguments
+  - Meaningful naming
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🛠️ Setup Instructions
+
+1. Clone the repo
+   ```bash
+   git clone https://github.com/your-username/list-creation-app.git
+   cd list-creation-app
+   ```
+2. Install dependencies
+   ``` bash
+   npm install
+   ```
+3. Start development server
+   ``` bash
+   npm start
+   ```
+4. Deploy (if needed)
+   ``` bash
+   npm run deploy
+   ```
+   
+
+
