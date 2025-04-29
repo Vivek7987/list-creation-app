@@ -6,7 +6,7 @@ A responsive React application to fetch and manage categorized lists dynamically
 
 ## 🚀 Live Demo
 
-🔗 [Click here to view the deployed app](https://your-username.github.io/list-creation-app)
+🔗 [Click here to view the deployed app]([https://your-username.github.io/list-creation-app](https://vivek7987.github.io/list-creation-app/))
 
 ---
 
